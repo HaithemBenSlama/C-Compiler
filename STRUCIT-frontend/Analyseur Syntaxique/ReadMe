@@ -1,0 +1,13 @@
+Pour Installer Yacc :
+	sudo apt-get install bison
+	sudo apt-get install byacc
+Execution :
+	lex STRUCIT-frontend.l
+	yacc STRUCIT-frontend.y
+	gcc y.tab.c 
+	./a.out
+	
+Pour changer le fichier a tester il suffit de:
+	1- Placer le fichier dans cette répértoire
+	2- Changer la ligne 352 ==> yyin=fopen("NomDuVotreFichier.c","r");
+	3- Executer a nouveau

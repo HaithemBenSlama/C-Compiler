@@ -1,0 +1,14 @@
+Pour installer Lex :
+	sudo apt-get install flex 
+Execution : 
+lex STRUCIT-frontend.l
+cc lex.yy.c -ll
+./a.out
+cat output.txt
+
+Pour changer le fichier a tester il suffit de:
+	1- Placer le fichier dans cette répértoire
+	2- Changer la ligne 68 ==> yyin=fopen("NomDuVotreFichier.c","r");
+	3- Executer a nouveau
+	
+!!! Vous trouvez le resultat dans le fichier output.txt

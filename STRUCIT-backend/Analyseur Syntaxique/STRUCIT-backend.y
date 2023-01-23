@@ -1,11 +1,7 @@
 %{
-#include <stdio.h>
-#include <string.h>
-
-void yyerror(const char *str) {
-        fprintf(stderr,"error: %s\n",str);
-}
- 
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
 int yywrap() {
         return 1;
 }
@@ -183,7 +179,15 @@ function_definition
 int main()
 {
 	yyin=fopen("exemple-strucit-backend.c","r");
-	yyparse();
+	if(!yyparse())
+		printf("\n Programme correct\n");
+	else
+		printf("\n Programme Incorrect\n");
+	
 	fclose(yyin);
 	return 0;
+}
+
+void yyerror(char*s){
+	printf("%s",s);
 }

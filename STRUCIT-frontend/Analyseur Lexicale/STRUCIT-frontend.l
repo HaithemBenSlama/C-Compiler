@@ -8,7 +8,6 @@ IS                      (u|U|l|L)*
 %x mcomment
 %{
 #include <stdio.h>
-#include "STRUCIT-frontend.tab.h"
 int line_number = 1;
 %}
 

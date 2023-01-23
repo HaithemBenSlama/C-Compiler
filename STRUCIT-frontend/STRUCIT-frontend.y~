@@ -1,14 +1,7 @@
 %{
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-void yyerror(const char *str) {
-        fprintf(stderr,"error: %s\n",str);
-}
- 
-int yywrap() {
-        return 1;
-}
+	#include<stdio.h>
+	#include<stdlib.h>
+	#include<string.h>
 %}
 
 %token IDENTIFIER CONSTANT STRING_LITERAL 
@@ -331,6 +324,7 @@ external_declaration
 	: function_definition external_declaration
 	| declaration external_declaration
 	| %empty
+	| {printf("erreur");}
 	;
 
 function_definition
